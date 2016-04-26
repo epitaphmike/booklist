@@ -1,6 +1,7 @@
 import DAO from './dao';
 import md5 from 'blueimp-md5';
-import salt from '../private/salt';
+const salt = 'dfsdfsd';
+
 import { ObjectID } from 'mongodb';
 
 const newUsersSubjects = [

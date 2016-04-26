@@ -24,11 +24,9 @@ var _blueimpMd5 = require('blueimp-md5');
 
 var _blueimpMd52 = _interopRequireDefault(_blueimpMd5);
 
-var _privateSalt = require('../private/salt');
-
-var _privateSalt2 = _interopRequireDefault(_privateSalt);
-
 var _mongodb = require('mongodb');
+
+var salt = 'dfsdfsd';
 
 var newUsersSubjects = [{ name: 'History', path: null }, { name: 'Science', path: null }, { name: 'Literature', path: null }, { name: 'Economics', path: null }, { name: 'Law', path: null }, { name: 'Technology', path: null }];
 
@@ -245,12 +243,12 @@ var UserDAO = (function (_DAO) {
     }, {
         key: 'saltAndHashPassword',
         value: function saltAndHashPassword(password) {
-            return (0, _blueimpMd52['default'])('' + _privateSalt2['default'] + password + _privateSalt2['default']);
+            return (0, _blueimpMd52['default'])('' + salt + password + salt);
         }
     }, {
         key: 'saltAndHashToken',
         value: function saltAndHashToken(email) {
-            return (0, _blueimpMd52['default'])('' + _privateSalt2['default'] + email + _privateSalt2['default']);
+            return (0, _blueimpMd52['default'])('' + salt + email + salt);
         }
     }]);
 
