@@ -4,17 +4,18 @@ Object.defineProperty(exports, '__esModule', {
     value: true
 });
 
-var _require;
-
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 var awsCredentials = {}; //require('../private/awsCredentials'), //not checked in - you'll need to use your own
-OperationHelper = require('apac').OperationHelper, (_require = require('../utils/nodeHelpers.js'),
-//opHelper = new OperationHelper(awsCredentials),
-nodeCallback = _require.nodeCallback, _require), Promise = require('promise');
+var OperationHelper = require('apac').OperationHelper;
 
+var _require = require('../utils/nodeHelpers.js');
+
+//opHelper = new OperationHelper(awsCredentials),
+var nodeCallback = _require.nodeCallback;
+var Promise = require('promise');
 var AmazonSearch = (function () {
     function AmazonSearch() {
         _classCallCheck(this, AmazonSearch);
