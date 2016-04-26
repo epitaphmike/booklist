@@ -80,10 +80,19 @@ passport.serializeUser(function (user, done) {
     done(null, user.id);
 });
 
+var cache = {};
+
 passport.deserializeUser(function (id, done) {
+    return done(undefined, { id: '' + id, _id: '' + id });
+
+    if (cache[id]) {
+        return done(undefined, cache[id]);
+    }
     var userDao = new _dataAccessUserDAO2['default']();
     userDao.findById(id).then(function (user) {
-        return done(undefined, Object.assign(user, { id: '' + user._id }));
+        Object.assign(user, { id: '' + user._id });
+        //cache[id] = user;
+        done(undefined, user);
     }, function (error) {
         return done(error);
     });
