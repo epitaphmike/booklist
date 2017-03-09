@@ -17,7 +17,7 @@
     "apac": "1.0.0",
     "aws-sdk": "2.3.14",
     "blueimp-md5": "2.3.0",
-    "body-parser": "1.13.2",
+    "body-parser": "1.17.1",
     "compression": "1.6.2",
     "cookie-parser": "1.4.0",
     "easy-express-controllers": "0.2.1",
